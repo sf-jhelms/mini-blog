@@ -9,6 +9,11 @@ export default Ember.Controller.extend({
       date: this.get('date'),
       body: this.get('body')
     }).save()
+    this.set('title', 'Title')
+    this.set('author', 'Author')
+    this.set('date', 'MM/DD/YYY')
+    this.set('body', 'Body')
+
   },
   destroyItem(blog){
     blog.destroyRecord();
