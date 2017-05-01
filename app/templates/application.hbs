@@ -1,5 +1,27 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<h1>My Blargh </h1>
 
-{{outlet}}
+<div class="new-post" width="40">
+<p><b>New Blog Post</b></p>
+{{textarea value=title cols="52" rows="1" placeholder="Title"}}
+{{textarea value=author cols="30" rows="1" placeholder="Author"}}
+<br>
+{{textarea value=date cols="10" rows="1" placeholder="MM/DD/YYY"}}
+{{textarea value=body cols="52" rows="5" placeholder="Body"}}
+<br>
+<br>
+<button class="pull-right" {{action 'createNewItems'}}>Create</button>
+</div>
+
+  {{#each model as |blog|}}
+  <div class="post" width="40">
+        <b>{{blog.title}}</b>
+        <br>
+        {{blog.author}}
+        <br>
+        {{blog.date}}
+        <br>
+        {{blog.body}}
+        <br>
+        <button class="pull-right" {{action 'destroyItem' blog}}>Delete Post</button>
+  </div>
+  {{/each}}

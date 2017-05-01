@@ -4,6 +4,14 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'mini-blog',
     environment: environment,
+    firebase: {
+        apiKey: "AIzaSyAZbmSQHjFOphCFe-KazxzztblO1oHQ9vI",
+        authDomain: "mini-blog-3bc9b.firebaseapp.com",
+        databaseURL: "https://mini-blog-3bc9b.firebaseio.com",
+        projectId: "mini-blog-3bc9b",
+        storageBucket: "mini-blog-3bc9b.appspot.com",
+        messagingSenderId: "910843264333"
+        },
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {
